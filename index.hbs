@@ -21,15 +21,16 @@ into the {body} of the default.hbs template --}}
 {{!< default}}
 
 {{!-- Special header.hbs partial to generate the <header> tag --}}
-{{#if @custom.custom_hero_image}}
-  {{> hero home_hero=@custom.custom_hero_image}}
-{{else}}
-  {{> hero background=@site.cover_image}}
-{{/if}}
+{{> header background=@site.cover_image}}
+
 
 <main class="main-wrap">
   {{!-- Inject styles of the hero image to make it responsive --}}
-  {{> hero background=@site.cover_image}}
+  {{#if @custom.custom_hero_image}}
+    {{> hero home_hero=@custom.custom_hero_image}}
+  {{else}}
+    {{> hero background=@site.cover_image}}
+  {{/if}}
   <div class="m-hero__content" data-animate="fade-down">
     <h1 class="m-hero-title bigger">{{@site.title}}</h1>
     {{#if @site.description}}
