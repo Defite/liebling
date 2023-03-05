@@ -19,7 +19,7 @@ for it, and apply those styles to the <header> tag.
       />
     </div>
 {{else if home_hero}}
-  <section class="m-hero no-picture {{#is "post"}}in-post{{/is}}" data-animate="fade" style="background: url({{img_url home_hero}}) repeat">
+  <section class="m-hero no-picture {{#is "post"}}in-post{{/is}}" data-animate="fade" style="background-image: url({{img_url home_hero}}); background-repeat: repeat">
 {{else}}
   <section class="m-hero no-picture {{#is "post"}}in-post{{/is}}" data-animate="fade">
 {{/if}}
